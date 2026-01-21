@@ -1,8 +1,24 @@
+// import 'package:flutter/material.dart';
+// import 'package:flutter_riverpod/flutter_riverpod.dart';
+// import 'src/app.dart';
+// import 'core/notification_service.dart';
+
+
+// void main() {
+//   WidgetsFlutterBinding.ensureInitialized();
+//   runApp(const ProviderScope(child: InsightMindApp()));
+// }
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'src/app.dart';
+import 'core/notification_service.dart';
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  // 🔹 TAMBAHAN SAJA (WAJIB UNTUK NOTIFIKASI)
+  await NotificationService.init();
+
   runApp(const ProviderScope(child: InsightMindApp()));
 }

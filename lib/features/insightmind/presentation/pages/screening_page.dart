@@ -5,6 +5,8 @@ import '../providers/questionnaire_provider.dart';
 import '../../domain/entities/question.dart';
 import '../providers/score_provider.dart';
 import 'result_page.dart';
+import 'screening_detail_page.dart';
+
 
 class ScreeningPage extends ConsumerWidget {
   const ScreeningPage({super.key});

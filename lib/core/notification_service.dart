@@ -117,6 +117,61 @@
 // }
 
 
+// import 'package:flutter/material.dart';
+
+// class NotificationService {
+//   /// Dipanggil dari main.dart
+//   static Future<void> init() async {
+//     debugPrint('🔔 NotificationService initialized');
+//   }
+
+//   /// Dipanggil dari ResultPage
+//   static void showNotification({
+//     required String title,
+//     required String body,
+//   }) {
+//     debugPrint('🔔 $title');
+//     debugPrint(body);
+//   }
+// }
+
+// import 'package:flutter/material.dart';
+
+// class NotificationService {
+//   /// Dipanggil dari main.dart
+//   static Future<void> init() async {
+//     debugPrint('🔔 NotificationService initialized');
+//   }
+
+//   /// Dipanggil dari ResultPage
+//   static void showNotification({
+//     required String title,
+//     required String body,
+//   }) {
+//     debugPrint('🔔 $title');
+//     debugPrint(body);
+//   }
+
+//   // =====================================================
+//   // 🔹 TAMBAHAN BARU (TIDAK MENGUBAH KODE LAMA)
+//   // =====================================================
+
+//   /// Dipanggil dari Dashboard (Reminder Screening)
+//   static Future<void> setDailyReminder({
+//     required TimeOfDay time,
+//   }) async {
+//     debugPrint(
+//       '⏰ Reminder Screening diset pada ${time.hour}:${time.minute.toString().padLeft(2, '0')}',
+//     );
+//   }
+
+//   /// Untuk mematikan reminder (opsional)
+//   static Future<void> cancelReminder() async {
+//     debugPrint('❌ Reminder Screening dibatalkan');
+//   }
+// }
+
+
 import 'package:flutter/material.dart';
 
 class NotificationService {
@@ -132,5 +187,16 @@ class NotificationService {
   }) {
     debugPrint('🔔 $title');
     debugPrint(body);
+  }
+
+  // ✅ TAMBAHAN SAJA (UNTUK DASHBOARD)
+  static void setDailyReminder({
+    required TimeOfDay time,
+  }) {
+    debugPrint(
+      '⏰ Reminder screening diset setiap hari pukul '
+      '${time.hour.toString().padLeft(2, '0')}:'
+      '${time.minute.toString().padLeft(2, '0')}',
+    );
   }
 }
